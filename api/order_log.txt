@@ -1,0 +1,52 @@
+Array
+(
+    [addressid] => 12
+    [addtocartid] => Array
+        (
+            [0] => 91
+            [1] => 94
+            [2] => 93
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 1
+        )
+
+    [totalamount] => Array
+        (
+            [0] => 1999
+            [1] => 5999
+            [2] => 5999
+        )
+
+)
+Total Amount: 1
+Array
+(
+    [addressid] => 12
+    [addtocartid] => Array
+        (
+            [0] => 91
+            [1] => 94
+            [2] => 93
+        )
+
+    [quantity] => Array
+        (
+            [0] => 1
+            [1] => 2
+            [2] => 1
+        )
+
+    [totalamount] => Array
+        (
+            [0] => 1999
+            [1] => 5999
+            [2] => 5999
+        )
+
+)
+Total Amount: 1
