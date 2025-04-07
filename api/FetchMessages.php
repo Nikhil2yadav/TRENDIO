@@ -27,6 +27,7 @@ if (isset($_GET['sellerId'])) {
     $query = "SELECT sc.*, s.Name 
           FROM seller_contact sc
           INNER JOIN seller s ON sc.sellerId = s.sellerId
+          where sc.Reply=''
           ORDER BY sc.Date DESC";
 
 }

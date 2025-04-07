@@ -10,6 +10,8 @@ import axios from 'axios';
 
 const Product = () => {
   const [usersData, setUsersData] = useState([]);
+  const [searchText, setSearchText] = useState('');
+
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -34,6 +36,12 @@ const Product = () => {
     fetchProduct();
   }, []);
 
+  // const filteredData = usersData.filter(item =>
+  //   item.ProductName.toLowerCase().includes(searchText.toLowerCase()) ||
+  //   item.ProductPrice.toLowerCase().includes(searchText.toLowerCase()) ||
+  //   item.Name.toLowerCase().includes(searchText.toLowerCase())
+  // );
+  
   // Function to delete a product
   const deleteProduct = async (ProductId) => {
     const confirmed = window.confirm("Are you sure you want to delete this product?");
@@ -48,6 +56,15 @@ const Product = () => {
       }
     }
   };
+  const priceRanges = [
+    { label: "All", min: 0, max: Infinity },
+    { label: "₹0 - ₹499", min: 0, max: 499 },
+    { label: "₹500 - ₹999", min: 500, max: 999 },
+    { label: "₹1000 - ₹1999", min: 1000, max: 1999 },
+    { label: "₹2000+", min: 2000, max: Infinity }
+  ];
+  const [selectedRange, setSelectedRange] = useState(priceRanges[0]);
+  
 
   // Function to toggle product status
   const toggleProductStatus = async (ProductId, currentStatus) => {
@@ -56,6 +73,7 @@ const Product = () => {
 const formData=new FormData();
 formData.append('ProductId',ProductId);
 formData.append("newStatus", currentStatus === "1" ? "0" : "1");
+
 
       const response = await axios.post(
         "http://localhost:8080/college%20project/mini%20project/api/UpdateProductStatus.php",
@@ -82,7 +100,17 @@ formData.append("newStatus", currentStatus === "1" ? "0" : "1");
       toast.error("Error updating product status");
     }
   };
-
+  const filteredData = usersData.filter(item => {
+    const searchMatch =
+      item.ProductName.toLowerCase().includes(searchText.toLowerCase()) ||
+      item.Name.toLowerCase().includes(searchText.toLowerCase());
+  
+    const price = parseFloat(item.ProductPrice);
+    const inRange = price >= selectedRange.min && price <= selectedRange.max;
+  
+    return searchMatch && inRange;
+  });
+  
   // Define columns for DataTable
   const columns = [
     {
@@ -164,14 +192,51 @@ formData.append("newStatus", currentStatus === "1" ? "0" : "1");
       <div className="card">
         <h5 className="card-header">Products</h5>
         <div className='card-body'>
+        <div className='row'>
+        <div className="col-md-4">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Search by name or seller"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+        </div>
+        <div>
+  <label>Filter by Price Range:</label>
+
+        </div>
+        <div className="col-md-4">
+  <select
+    className="form-control"
+    value={selectedRange.label}
+    onChange={(e) => {
+      const selected = priceRanges.find(r => r.label === e.target.value);
+      setSelectedRange(selected);
+    }}
+  >
+    {priceRanges.map((range, index) => (
+      <option key={index} value={range.label}>
+        {range.label}
+      </option>
+    ))}
+  </select>
+</div>
+        </div>
+       
+
           {/* Render DataTable */}
           <DataTable
+          
             columns={columns}
-            data={usersData}
+            data={filteredData}
             pagination
             highlightOnHover
             defaultSortFieldId="ProductName"
-          />
+          >
+            
+          </DataTable>
+
         </div>
         <ToastContainer />
       </div>

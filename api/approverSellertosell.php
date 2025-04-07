@@ -27,6 +27,7 @@ if (empty($LoginId) || empty($SellerId)) {
 
 // Prepare and bind
 $stmt = $conn->prepare("INSERT INTO `approvedseller` (`SellerId`, `LoginId`, `status`) VALUES (?, ?, '1')");
+// echo $stmt;
 $stmt->bind_param("ss", $SellerId, $LoginId);
 
 // Execute the statement and check for errors

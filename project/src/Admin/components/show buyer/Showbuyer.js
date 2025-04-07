@@ -10,6 +10,11 @@ import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
 
 const Showbuyer = () => {
   const [buyersData, setBuyersData] = useState([]);
+  const [searchText, setSearchText] = useState('');
+
+  const filterBuyer=buyersData.filter(buyer=>
+    buyer.Name.toLowerCase().includes(searchText.toLowerCase())
+  );
 
   // Function to fetch buyers data from the API
   const fetchBuyers = async () => {
@@ -145,9 +150,19 @@ const Showbuyer = () => {
       <div className="card">
         <h5 className="card-header">Buyer List</h5>
         <div className='card-body'>
+        <div className="mb-3">
+  <input
+    type="text"
+    className="form-control"
+    placeholder="Search by buyer name"
+    value={searchText}
+    onChange={(e) => setSearchText(e.target.value)}
+  />
+</div>
+
           <DataTable
             columns={columns}
-            data={buyersData}
+            data={filterBuyer}
             pagination
             highlightOnHover
             defaultSortFieldId="buyername"

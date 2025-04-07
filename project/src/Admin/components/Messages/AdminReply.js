@@ -59,6 +59,29 @@ const AdminReply = () => {
      <div className="container mt-5">
       <h2>Admin Panel: Reply to Seller Messages</h2>
       <div className="mt-4">
+  {messages.length === 0 ? (
+    <div className="alert alert-info">No requests from sellers found.</div>
+  ) : (
+    messages.map((msg, index) => (
+      <div key={index} className="mb-4">
+        <p><strong>Seller ID:</strong> {msg.SellerId}</p>
+        <p><strong>Seller Name:</strong> {msg.Name}</p>
+        <p><strong>Message:</strong> {msg.Message}</p>
+        <input
+          type="text"
+          className="form-control mb-2"
+          placeholder="Write reply..."
+          value={reply}
+          onChange={(e) => setReply(e.target.value)}
+        />
+        <button className="btn btn-primary" onClick={() => handleReply(msg.ContactID)}>Send Reply</button>
+        <hr />
+      </div>
+    ))
+  )}
+</div>
+
+      {/* <div className="mt-4">
         {messages.map((msg, index) => (
           <div key={index} className="mb-4">
             <p><strong>Seller ID:</strong> {msg.SellerId}</p>
@@ -75,7 +98,7 @@ const AdminReply = () => {
             <hr />
           </div>
         ))}
-      </div>
+      </div> */}
     </div>
     </div>
    

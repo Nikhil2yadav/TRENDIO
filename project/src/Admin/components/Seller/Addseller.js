@@ -10,7 +10,7 @@ const Addseller = () => {
   const [sellers,setSellers]=useState([]);
   const [data, setData] = useState([]);
   const [error, setError] = useState(null);
-  const loginId = localStorage.getItem('userId'); // Get loginId from localStorage
+  const loginId = localStorage.getItem('AdminId'); // Get loginId from localStorage
   const navegate=useNavigate();
   useEffect(() => {
     const fetchData = async () => {
@@ -18,6 +18,7 @@ const Addseller = () => {
         const response = await axios.get('http://localhost:8080/college%20project/mini%20project/api/approvedseller.php');
         console.log('API Response:', response.data);  // Log API response for debugging
         setData(response.data);
+        // console.log("helo",data)
       } catch (err) {
         console.error('Error fetching data:', err);  // Log the error
         setError(err);  // Store the error in state
@@ -60,7 +61,11 @@ const Addseller = () => {
           }
         }
       );
+      console.log(response.data);
+      if(response.data.approvedseller_insert==='"success"'){
       navegate("/admin/Manageseller");
+
+      }
       console.log('Approving SellerId:', SellerId);
       console.log('API Response:', response.data);
 
