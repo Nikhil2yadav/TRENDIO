@@ -192,7 +192,6 @@ const SingleProduct = () => {
               />
               {product?.ProductPrice}
             </h4>
-            <p>{product?.ProductDescription}</p>
 
             {product?.Size && product?.Size.length > 0 ? (
               <Form.Group>
@@ -216,6 +215,7 @@ const SingleProduct = () => {
             ) : (
               <p>No sizes available</p>
             )}
+            
 
             <Form.Group className="mt-3">
               <Form.Label>Quantity</Form.Label>
@@ -243,7 +243,8 @@ const SingleProduct = () => {
                 </Button>
               </InputGroup>
             </Form.Group>
-
+            <b>Description:</b>
+            <p>{product?.ProductDescription}</p>
             <Button
               className="mt-3"
               onClick={handleAddToCart}

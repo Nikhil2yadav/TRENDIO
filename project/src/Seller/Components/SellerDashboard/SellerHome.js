@@ -166,7 +166,7 @@ const SellerHome = () => {
               <div className="small-box bg-info">
                 <div className="inner">
                   <h3>{totalproduct}</h3>
-                  <p>Total Products</p>
+                  <p>Products</p>
                 </div>
                 <div className="icon">
                   <i className="ion ion-bag" />
@@ -253,7 +253,7 @@ const SellerHome = () => {
               >
                 <div className="inner">
                   <h3>{formattedAmount}</h3>
-                  <p>Total Amount</p>
+                  <p>Salary</p>
                 </div>
                 <div className="icon">
                   <FaRupeeSign size={50} />
