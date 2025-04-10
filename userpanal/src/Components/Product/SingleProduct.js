@@ -25,6 +25,8 @@ const SingleProduct = () => {
   const [feedback, setFeedback] = useState("");
   const [reviews, setReviews] = useState([]);
   const [hover, setHover] = useState(null);
+  const [showFullDescription, setShowFullDescription] = useState(false);
+
   useEffect(() => {
     // fetchProductDetails();
     fetchProductReviews();
@@ -84,7 +86,12 @@ const SingleProduct = () => {
     setSelectedSize(e.target.value);
     setSizeError("");
   };
-
+  const getShortDescription = (description) => {
+    const words = description.split(" ");
+    if (words.length <= 20) return description;
+    return words.slice(0, 20).join(" ") + "...";
+  };
+  
   // const handleQuantityChange = (amount) => {
   //   const newQuantity = quantity + amount;
   //   if (newQuantity >= 1) {
@@ -243,8 +250,28 @@ const SingleProduct = () => {
                 </Button>
               </InputGroup>
             </Form.Group>
+            {/* <b>Description:</b>
+            <p>{product?.ProductDescription}</p> */}
             <b>Description:</b>
-            <p>{product?.ProductDescription}</p>
+              <p>
+                {product?.ProductDescription &&
+                  (showFullDescription
+                    ? product.ProductDescription
+                    : getShortDescription(product.ProductDescription))}
+                    {product?.ProductDescription?.split(" ").length > 20 && (
+                <p
+                
+                  variant="link"
+                  className="p-0 text-primary"
+                  onClick={() => setShowFullDescription(!showFullDescription)}
+                >
+                  {showFullDescription ? "View Less" : "View More"}
+                </p>
+              )}
+              </p>
+
+              
+
             <Button
               className="mt-3"
               onClick={handleAddToCart}
