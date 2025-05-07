@@ -11,7 +11,7 @@ const SellerReport = () => {
 
   const fetchSellerData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerAddProductReportapi.php");
+      const response = await axios.get("http://trendio.free.nf/api/ReportsApi/SellerAddProductReportapi.php");
       setSellerData(response.data);
     } catch (error) {
       console.error("Error fetching seller report:", error);

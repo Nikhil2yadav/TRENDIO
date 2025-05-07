@@ -15,7 +15,7 @@ const Addseller = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/college%20project/mini%20project/api/approvedseller.php');
+        const response = await axios.get('http://trendio.free.nf/api/approvedseller.php');
         console.log('API Response:', response.data);  // Log API response for debugging
         setData(response.data);
         // console.log("helo",data)
@@ -31,7 +31,7 @@ const Addseller = () => {
     const confirmed = window.confirm('Are you sure you want to delete this seller?');
     if (confirmed) {
       try {
-        await axios.get(`http://localhost:8080/college%20project/mini%20project/api/DeleteSeller.php?SellerId=${SellerId}`);
+        await axios.get(`http://trendio.free.nf/api/DeleteSeller.php?SellerId=${SellerId}`);
         setSellers(sellers.filter(seller => seller.SellerId !== SellerId));
         toast.success('Seller deleted successfully', {
           className: "toastifycontainer",
@@ -50,7 +50,7 @@ const Addseller = () => {
       console.log('Sending data to API:', { SellerId, loginId }); // Log the data to be sent for debugging
 
       const response = await axios.post(
-        'http://localhost:8080/college%20project/mini%20project/api/approverSellertosell.php', 
+        'http://trendio.free.nf/api/approverSellertosell.php', 
         new URLSearchParams({
           SellerId: SellerId,  // Explicitly set the keys
           loginId: loginId,

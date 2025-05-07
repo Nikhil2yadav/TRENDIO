@@ -16,7 +16,7 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
+    console.log("Sending:", { email, password });
     // Reset form errors
     setFormError({ email: '', password: '' });
     setError('');
@@ -37,7 +37,7 @@ const Login = () => {
 
     try {
       // Try admin login first
-      let response = await axios.post('http://127.0.0.1:8080/college%20project/mini%20project/api/LoginApi.php',
+      let response = await axios.post('http://trendio.free.nf/api/LoginApi.php',
         formData.toString(),
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
       );

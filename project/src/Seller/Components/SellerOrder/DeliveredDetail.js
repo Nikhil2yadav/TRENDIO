@@ -21,7 +21,7 @@ const DeliveredDetail = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:8080/college%20project/mini%20project/api/GetDeliveredinformation.php',
+          'http://trendio.free.nf/api/GetDeliveredinformation.php',
           { orderDetailId },
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
         );
@@ -146,7 +146,7 @@ const DeliveredDetail = () => {
                 <td>{index + 1}</td>
                 <td>
                   <img
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${user.Image1}`}
+                    src={`http://trendio.free.nf/api/Images/${user.Image1}`}
                     alt="Product"
                     width="50"
                   />

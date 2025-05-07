@@ -15,7 +15,7 @@ const Amount = () => {
     const fetchProduct = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/college%20project/mini%20project/api/displayamountgetadmin.php",
+          "http://trendio.free.nf/api/displayamountgetadmin.php",
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         );
         console.log('API Response:', response.data);

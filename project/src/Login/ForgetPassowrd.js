@@ -33,7 +33,7 @@ const navigate=useNavigate();
       formData.append("Email", email);
 
       const response = await axios.post(
-        "http://127.0.0.1:8080/college%20project/mini%20project/api/CheckEmailApi.php",
+        "http://trendio.free.nf/api/CheckEmailApi.php",
         formData
       );
 
@@ -73,7 +73,7 @@ const navigate=useNavigate();
       formData.append("Email", email);
       formData.append("Password", password);
       const response = await axios.post(
-        "http://127.0.0.1:8080/college%20project/mini%20project/api/ResetPasswordApi.php",
+        "http://trendio.free.nf/api/ResetPasswordApi.php",
         formData
       );
 

@@ -10,7 +10,7 @@ function Profile() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/GetAdmindata.php');
+        const response = await axios.post('http://trendio.free.nf/api/GetAdmindata.php');
         console.log("API Response:", response.data);
         setUser(response.data[0]);
       } catch (error) {

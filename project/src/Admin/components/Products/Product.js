@@ -16,8 +16,8 @@ const Product = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.post(
-          "http://localhost:8080/college%20project/mini%20project/api/DisplayProductApi.php",
+        const response = await axios.get(
+          "http://trendio.free.nf/api/DisplayProductApi.php",
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         );
         console.log('API Response:', response);
@@ -47,7 +47,7 @@ const Product = () => {
     const confirmed = window.confirm("Are you sure you want to delete this product?");
     if (confirmed) {
       try {
-        await axios.get(`http://localhost:8080/college%20project/mini%20project/api/DeleteProductApi.php?ProductId=${ProductId}`);
+        await axios.get(`http://trendio.free.nf/api/DeleteProductApi.php?ProductId=${ProductId}`);
         setUsersData(usersData.filter(product => product.ProductId !== ProductId));
         toast.success("Product deleted successfully", { autoClose: 2000 });
       } catch (error) {
@@ -76,7 +76,7 @@ formData.append("newStatus", currentStatus === "1" ? "0" : "1");
 
 
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/UpdateProductStatus.php",
+        "http://trendio.free.nf/api/UpdateProductStatus.php",
         formData
       );
 
@@ -119,7 +119,7 @@ formData.append("newStatus", currentStatus === "1" ? "0" : "1");
       sortable: true,
       cell: row => (
         <img 
-          src={`http://localhost:8080/college%20project/mini%20project/api/Images/${row.Image1}`} 
+          src={`http://trendio.free.nf/api/Images/${row.Image1}`} 
           alt={row.ProductName} 
           style={{ width: '50px', height: '50px', objectFit: 'cover' }}
         />

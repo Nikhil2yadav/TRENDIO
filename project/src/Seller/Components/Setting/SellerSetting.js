@@ -27,7 +27,7 @@ const SellerSetting = () => {
     const fetchSellerData = async () => {
       try {
         const response = await axios.post(
-          'http://localhost:8080/college%20project/mini%20project/api/GetSingleSellerdata.php',
+          'http://trendio.free.nf/api/GetSingleSellerdata.php',
           { SellerId: SellerId },
           {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
@@ -65,7 +65,7 @@ const SellerSetting = () => {
     const fetchSellerData = async () => {
       try {
         const response = await axios.post(
-          'http://localhost:8080/college%20project/mini%20project/api/GetSingleSellerdata.php',
+          'http://trendio.free.nf/api/GetSingleSellerdata.php',
           { SellerId: SellerId },
           {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
@@ -86,7 +86,7 @@ const SellerSetting = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:8080/college%20project/mini%20project/api/UpdateSellerApi.php',
+        'http://trendio.free.nf/api/UpdateSellerApi.php',
         { SellerId, ...userData },
         {
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' }

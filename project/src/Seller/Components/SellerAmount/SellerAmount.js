@@ -15,7 +15,7 @@ const SellerId=localStorage.getItem('userId');
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/college%20project/mini%20project/api/displayselleramountaccordingtoseller.php?SellerId=${SellerId}`,
+          `http://trendio.free.nf/api/displayselleramountaccordingtoseller.php?SellerId=${SellerId}`,
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         );
         console.log('API Response:', response.data);

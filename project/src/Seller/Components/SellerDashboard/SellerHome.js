@@ -18,7 +18,7 @@ const SellerHome = () => {
     const totalproduct = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/college%20project/mini%20project/api/productcountasseller.php",
+          "http://trendio.free.nf/api/productcountasseller.php",
           { SellerId: SellerId },
           {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -37,7 +37,7 @@ const SellerHome = () => {
     const totalpendingorder = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/college%20project/mini%20project/api/CountPendingorder.php",
+          "http://trendio.free.nf/api/CountPendingorder.php",
           { SellerId: SellerId },
           {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -56,7 +56,7 @@ const SellerHome = () => {
     const totaldelivered = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/college%20project/mini%20project/api/CountDeliveredorder.php",
+          "http://trendio.free.nf/api/CountDeliveredorder.php",
           { SellerId: SellerId },
           {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -75,7 +75,7 @@ const SellerHome = () => {
     const totalshippingorder = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/college%20project/mini%20project/api/Countshippingorder.php",
+          "http://trendio.free.nf/api/Countshippingorder.php",
           { SellerId: SellerId },
           {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -94,7 +94,7 @@ const SellerHome = () => {
     const totaloutfordelivery = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/college%20project/mini%20project/api/Countoutfordeliveryorder.php",
+          "http://trendio.free.nf/api/Countoutfordeliveryorder.php",
           { SellerId: SellerId },
           {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -113,7 +113,7 @@ const SellerHome = () => {
     const totalamount = async () => {
       try {
         const response = await axios.post(
-          "http://localhost:8080/college%20project/mini%20project/api/GetTOtalAmountOfSeller.php",
+          "http://trendio.free.nf/api/GetTOtalAmountOfSeller.php",
           { SellerId: SellerId },
           {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },

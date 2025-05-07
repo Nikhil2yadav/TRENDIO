@@ -21,7 +21,7 @@ const OutfordeliveryDetail = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:8080/college%20project/mini%20project/api/GetDetailinformationaboutoutfordelivey.php',
+          'http://trendio.free.nf/api/GetDetailinformationaboutoutfordelivey.php',
           { orderDetailId },
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
         );
@@ -46,7 +46,7 @@ const OutfordeliveryDetail = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/college%20project/mini%20project/api/UpdatePendingtoshiping.php',
+        'http://trendio.free.nf/api/UpdatePendingtoshiping.php',
         { orderDetailId, orderStatus },
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
       );
@@ -144,7 +144,7 @@ const OutfordeliveryDetail = () => {
                 <td>{index + 1}</td>
                 <td>
                   <img
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${user.Image1}`}
+                    src={`http://trendio.free.nf/api/Images/${user.Image1}`}
                     alt="Product"
                     width="50"
                   />

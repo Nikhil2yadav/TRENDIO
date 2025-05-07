@@ -627,7 +627,7 @@ const SellerReport = () => {
   // Fetch seller report with filters
   const fetchReport = async () => {
     try {
-      let url = `http://localhost:8080/college%20project/mini%20project/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`;
+      let url = `http://trendio.free.nf/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`;
 
       if (filters.year) url += `&year=${filters.year}`;
       if (filters.month) url += `&month=${filters.month}`;
@@ -653,7 +653,7 @@ const SellerReport = () => {
   const fetchProductTypes = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/college%20project/mini%20project/api/ReportsApi/GetProductTypes.php?sellerId=${sellerId}`
+        `http://trendio.free.nf/api/ReportsApi/GetProductTypes.php?sellerId=${sellerId}`
       );
   
       console.log("Product Types API Response:", response.data); // Debugging
