@@ -37,7 +37,7 @@ const Login = () => {
 
     try {
       // Try admin login first
-      let response = await axios.post('http://trendio.free.nf/api/LoginApi.php',
+      let response = await axios.post('https://trendio.free.nf/api/LoginApi.php',
         formData.toString(),
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
       );
