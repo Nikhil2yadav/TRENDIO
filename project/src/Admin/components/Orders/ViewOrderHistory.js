@@ -378,8 +378,8 @@ const ViewOrderHistory = () => {
     const fetchData = async () => {
       try {
         const [ordersRes, yearsRes] = await Promise.all([
-          axios.post('http://trendio.free.nf/api/GetTotalDelivered.php', { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }),
-          axios.post('http://trendio.free.nf/api/GetOrderYears.php')
+          axios.post('http://localhost:8080/college%20project/mini%20project/api/GetTotalDelivered.php', { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }),
+          axios.post('http://localhost:8080/college%20project/mini%20project/api/GetOrderYears.php')
         ]);
 
         if (Array.isArray(ordersRes.data)) {

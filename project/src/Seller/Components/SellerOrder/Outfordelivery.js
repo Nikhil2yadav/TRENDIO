@@ -24,7 +24,7 @@ const Outfordelivery = () => {
 
       try {
         const response = await axios.post(
-          'http://trendio.free.nf/api/GetoutfordeliveryOrderaccordingtoseller.php',
+          'http://localhost:8080/college%20project/mini%20project/api/GetoutfordeliveryOrderaccordingtoseller.php',
           { SellerId },
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
         );

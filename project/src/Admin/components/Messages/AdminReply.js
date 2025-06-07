@@ -9,12 +9,12 @@ const AdminReply = () => {
   const [reply, setReply] = useState('');
 
   const fetchMessages = async () => {
-    const response = await axios.get('http://trendio.free.nf/api/FetchMessages.php');
+    const response = await axios.get('http://localhost:8080/college%20project/mini%20project/api/FetchMessages.php');
     setMessages(response.data);
   };
 
   const handleReply = async (contactId) => {
-    const response = await axios.post('http://trendio.free.nf/api/ReplyToMessage.php', {
+    const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/ReplyToMessage.php', {
       contactId: contactId,
       reply: reply,
     },{ headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }

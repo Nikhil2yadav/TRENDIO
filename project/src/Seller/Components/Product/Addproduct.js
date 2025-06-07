@@ -23,7 +23,7 @@ const AddProduct = () => {
   const [productSize,setProductSize]=useState([]);
   const fetchProductSize = async () => {
     try {
-      const response = await axios.get("http://trendio.free.nf/api/getProductSize.php");
+      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/getProductSize.php");
       const data = response.data; // Ensure API returns an array
   
       // Process sizes: Split comma-separated values into individual sizes
@@ -38,7 +38,7 @@ const AddProduct = () => {
   };
   
   const fetchProductTypes = async () => {
-    const response = await axios.get('http://trendio.free.nf/api/getProductType.php');
+    const response = await axios.get('http://localhost:8080/college%20project/mini%20project/api/getProductType.php');
     setProductTypes(response.data);
     // console.log(response.data)
   };
@@ -74,7 +74,7 @@ const AddProduct = () => {
   const fetchProductData = async (id) => {
     try {
       const response = await axios.get(
-        `http://trendio.free.nf/api/GetsingleProductforupdateapi.php?ProductId=${id}`
+        `http://localhost:8080/college%20project/mini%20project/api/GetsingleProductforupdateapi.php?ProductId=${id}`
       );
       const product = response.data;
       console.log(response.data)
@@ -145,7 +145,7 @@ const AddProduct = () => {
   
     try {
       const response = await axios.post(
-        'http://trendio.free.nf/api/ProductApi.php',
+        'http://localhost:8080/college%20project/mini%20project/api/ProductApi.php',
         formData,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );
@@ -184,7 +184,7 @@ const AddProduct = () => {
     });
     try {
       const response = await axios.post(
-        'http://trendio.free.nf/api/UpdatePrdouctapi.php',
+        'http://localhost:8080/college%20project/mini%20project/api/UpdatePrdouctapi.php',
         formData,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );

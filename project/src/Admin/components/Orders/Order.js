@@ -172,7 +172,7 @@ const Order = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.post(
-          'http://trendio.free.nf/api/GetTotalOrderStatus.php',
+          'http://localhost:8080/college%20project/mini%20project/api/GetTotalOrderStatus.php',
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
         );
         if (Array.isArray(response.data)) {

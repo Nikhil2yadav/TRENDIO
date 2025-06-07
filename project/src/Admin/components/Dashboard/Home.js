@@ -223,23 +223,23 @@ export default function Home() {
   };
 
   useEffect(() => {
-    fetchData('http://trendio.free.nf/api/totalProductcount.php', (data) => setTotalProduct(data.totalproduct), 'Error fetching products');
+    fetchData('http://localhost:8080/college%20project/mini%20project/api/totalProductcount.php', (data) => setTotalProduct(data.totalproduct), 'Error fetching products');
   }, []);
 
   useEffect(() => {
-    fetchData('http://trendio.free.nf/api/Buyercount.php', (data) => setTotalBuyer(data.totalbuyer), 'Error fetching buyers');
+    fetchData('http://localhost:8080/college%20project/mini%20project/api/Buyercount.php', (data) => setTotalBuyer(data.totalbuyer), 'Error fetching buyers');
   }, []);
 
   useEffect(() => {
-    fetchData('http://trendio.free.nf/api/totalSeller.php', (data) => setTotalSeller(data.totalseller), 'Error fetching sellers');
+    fetchData('http://localhost:8080/college%20project/mini%20project/api/totalSeller.php', (data) => setTotalSeller(data.totalseller), 'Error fetching sellers');
   }, []);
 
   useEffect(() => {
-    fetchData('http://trendio.free.nf/api/getTotalAmountOfAdmin.php', (data) => setTotalAmount(data.totalAdminAmount), 'Error fetching amount');
+    fetchData('http://localhost:8080/college%20project/mini%20project/api/getTotalAmountOfAdmin.php', (data) => setTotalAmount(data.totalAdminAmount), 'Error fetching amount');
   }, []);
 
   useEffect(() => {
-    fetchData('http://trendio.free.nf/api/TotalOrderApi.php', (data) => setTotalOrders(data.totalorder), 'Error fetching orders');
+    fetchData('http://localhost:8080/college%20project/mini%20project/api/TotalOrderApi.php', (data) => setTotalOrders(data.totalorder), 'Error fetching orders');
   }, []);
 
   const formattedAmount = parseFloat(totalAmount).toFixed(2);

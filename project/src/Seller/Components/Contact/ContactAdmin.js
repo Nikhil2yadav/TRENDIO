@@ -10,14 +10,14 @@ const ContactAdmin = () => {
   const sellerId = localStorage.getItem('userId'); 
 
   const fetchMessages = async () => {
-    const response = await axios.get(`http://trendio.free.nf/api/FetchMessages.php?sellerId=${sellerId}`);
+    const response = await axios.get(`http://localhost:8080/college%20project/mini%20project/api/FetchMessages.php?sellerId=${sellerId}`);
     setMessages(response.data);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post('http://trendio.free.nf/api/ContactAdmin.php', {
+    const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/ContactAdmin.php', {
       sellerId: sellerId,
       message: message,
     },{ headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }

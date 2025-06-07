@@ -159,7 +159,7 @@ const ShippingOrder = () => {
 
       try {
         const response = await axios.post(
-          'http://trendio.free.nf/api/GetshippingOrderaccordingtoseller.php',
+          'http://localhost:8080/college%20project/mini%20project/api/GetshippingOrderaccordingtoseller.php',
           { SellerId },
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
         );

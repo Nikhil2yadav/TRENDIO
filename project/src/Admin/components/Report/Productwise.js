@@ -1484,7 +1484,7 @@ const SellerOrderReport = () => {
   // Fetch Data
   const fetchOrderData = async () => {
     try {
-      const response = await axios.get("http://trendio.free.nf/api/ReportsApi/SellerOrderReportapi.php", {
+      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
         params: { month, year, productType, sellerId },
       });
 
@@ -1504,7 +1504,7 @@ const SellerOrderReport = () => {
   // Fetch product types
   const fetchProductTypes = async () => {
     try {
-      const response = await axios.get("http://trendio.free.nf/api/ReportsApi/SellerOrderReportapi.php", {
+      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
         params: { getProductTypes: "true" },
       });
       setProductTypes(response.data);
@@ -1516,7 +1516,7 @@ const SellerOrderReport = () => {
   // Fetch sellers
   const fetchSellers = async () => {
     try {
-      const response = await axios.get("http://trendio.free.nf/api/ReportsApi/SellerOrderReportapi.php", {
+      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
         params: { getSellers: "true" },
       });
       setSellers(response.data);
@@ -1528,7 +1528,7 @@ const SellerOrderReport = () => {
   // Fetch available years
   const fetchYears = async () => {
     try {
-      const response = await axios.get("http://trendio.free.nf/api/ReportsApi/SellerOrderReportapi.php", {
+      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
         params: { getYears: "true" },
       });
       setYears(response.data);

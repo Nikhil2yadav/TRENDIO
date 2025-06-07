@@ -10,7 +10,7 @@ const SellerInfo = () => {
   useEffect(()=>{
     const fetchData = async () =>{
       try {
-        const response = await axios.post('http://trendio.free.nf/api/GetSingleSellerdata.php',{SellerId:SellerId},{
+        const response = await axios.post('http://treandio.rf.gd/api/GetSingleSellerdata.php',{SellerId:SellerId},{
           
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' } 
            

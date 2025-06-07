@@ -12,7 +12,7 @@ const AddProductSize = () => {
     e.preventDefault();
 
     const response = await axios.post(
-      'http://trendio.free.nf/api/insertSize.php',
+      'http://localhost:8080/college%20project/mini%20project/api/insertSize.php',
       {
         Size: size, // Sending size input
       },
