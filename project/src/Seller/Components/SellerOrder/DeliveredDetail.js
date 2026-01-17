@@ -21,7 +21,7 @@ const DeliveredDetail = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:8080/college%20project/mini%20project/api/GetDeliveredinformation.php',
+          'http://localhost:8000/api/GetDeliveredinformation.php',
           { orderDetailId },
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
         );
@@ -48,7 +48,7 @@ const DeliveredDetail = () => {
 
 //     try {
 //       const response = await axios.post(
-//         'http://localhost:8080/college%20project/mini%20project/api/UpdatePendingtoshiping.php',
+//         'http://localhost:8000/api/UpdatePendingtoshiping.php',
 //         { orderDetailId, orderStatus },
 //         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
 //       );

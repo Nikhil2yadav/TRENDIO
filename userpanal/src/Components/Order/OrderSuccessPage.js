@@ -22,7 +22,7 @@ export default function OrderSuccessPage() {
 
       try {
         const response = await axios.get(
-          `http://localhost:8080/college%20project/mini%20project/api/GetFullOrdeDetailes.php?orderId=${orderId}`
+          `http://localhost:8000/api/GetFullOrdeDetailes.php?orderId=${orderId}`
         );
 
         let data = response.data;
@@ -129,7 +129,7 @@ export default function OrderSuccessPage() {
                       <div className="row">
                         <div className="col-md-2">
                           <img
-                            src={`http://localhost:8080/college%20project/mini%20project/api/Images/${item.Image1}`}
+                            src={`http://localhost:8000/api/Images/${item.Image1}`}
                             alt={item.productname}
                             className="img-fluid rounded"
                           />

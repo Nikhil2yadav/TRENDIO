@@ -9,7 +9,7 @@
 //     const fetchOrders = async () => {
 //       try {
 //         const response = await axios.get(
-//           `http://localhost:8080/college%20project/mini%20project/api/GetBuyerOrders.php?BuyerId=${buyerId}`
+//           `http://localhost:8000/api/GetBuyerOrders.php?BuyerId=${buyerId}`
 //         );
 //         setOrders(response.data);
 //         console.log(response.data)
@@ -80,7 +80,7 @@ const Orderproduct = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/college%20project/mini%20project/api/GetBuyerOrders.php?BuyerId=${buyerId}`
+          `http://localhost:8000/api/GetBuyerOrders.php?BuyerId=${buyerId}`
         );
         setOrders(response.data);
         setFilteredOrders(response.data); // Initialize filtered orders
@@ -163,7 +163,7 @@ const Orderproduct = () => {
                 <td>{order.orderId}</td>
                 <td>
                 <img 
-                src={`http://localhost:8080/college%20project/mini%20project/api/Images/${order.Image1}`} 
+                src={`http://localhost:8000/api/Images/${order.Image1}`} 
                 alt={order.ProductName} 
                 style={{ width: '50px', height: '50px', objectFit: 'cover' }}
                   />

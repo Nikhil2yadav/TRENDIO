@@ -39,8 +39,8 @@ const ContactUs = () => {
         {/* Contact Form */}
         <Col md={6} className="mb-4">
           <h2>Get in Touch</h2>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formName" className="mb-3">
+          <Form onSubmit={handleSubmit} className='w-100 p-0'>
+            <Form.Group controlId="formName" className="mb-3 w-100">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
@@ -52,7 +52,7 @@ const ContactUs = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="formEmail" className="mb-3">
+            <Form.Group controlId="formEmail" className="mb-3 w-100">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 type="email"
@@ -64,7 +64,7 @@ const ContactUs = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="formMessage" className="mb-3">
+            <Form.Group controlId="formMessage" className="mb-3 w-100">
               <Form.Label>Message</Form.Label>
               <Form.Control
                 as="textarea"

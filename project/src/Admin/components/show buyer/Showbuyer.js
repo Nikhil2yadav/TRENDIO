@@ -19,7 +19,7 @@ const Showbuyer = () => {
   // Function to fetch buyers data from the API
   const fetchBuyers = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/college%20project/mini%20project/api/GetBuyers.php');
+      const response = await axios.get('http://localhost:8000/api/GetBuyers.php');
       if (Array.isArray(response.data)) {
         setBuyersData(response.data); // Set the buyer data
       } else {
@@ -36,7 +36,7 @@ const Showbuyer = () => {
     const confirmed = window.confirm("Are you sure you want to delete this buyer?");
     if (confirmed) {
       try {
-        await axios.get(`http://localhost:8080/college%20project/mini%20project/api/DeleteBuyerApi.php?buyerId=${BuyerId}`);
+        await axios.get(`http://localhost:8000/api/DeleteBuyerApi.php?buyerId=${BuyerId}`);
         setBuyersData(buyersData.filter(buyer => buyer.BuyerId !== BuyerId)); // Remove the deleted buyer from the table
         toast.success("Buyer deleted successfully");
       } catch (error) {
@@ -53,7 +53,7 @@ const Showbuyer = () => {
       formData.append('buyerId', BuyerId);
 
       const response = await axios.post(
-        'http://localhost:8080/college%20project/mini%20project/api/UpdateBuyerStatus.php',
+        'http://localhost:8000/api/UpdateBuyerStatus.php',
         formData
       );
 

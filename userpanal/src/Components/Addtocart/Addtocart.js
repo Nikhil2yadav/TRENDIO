@@ -30,7 +30,7 @@ const CartPage = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:8080/college%20project/mini%20project/api/getAddtocartproductaccrodingtobuyer.php',
+          'http://localhost:8000/api/getAddtocartproductaccrodingtobuyer.php',
           new URLSearchParams({ BuyerId: buyerID }),
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
         );
@@ -49,7 +49,7 @@ const CartPage = () => {
       // const formData = new URLSearchParams();
       // formData.append('addtocartid', addtocartid);
 
-      await axios.get(`http://localhost:8080/college%20project/mini%20project/api/Deleteaddtocart.php?addtocartid=${addtocartid}`, {
+      await axios.get(`http://localhost:8000/api/Deleteaddtocart.php?addtocartid=${addtocartid}`, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       });
 
@@ -82,7 +82,7 @@ const CartPage = () => {
               {cartItems.map((item) => (
                 <li key={item.addtocartid} className="list-group-item d-flex align-items-center">
                   <img
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${item.ProductImage}`}
+                    src={`http://localhost:8000/api/Images/${item.ProductImage}`}
                     alt={item.ProductName}
                     className="img-thumbnail"
                     style={{ width: '100px', height: '100px' }}

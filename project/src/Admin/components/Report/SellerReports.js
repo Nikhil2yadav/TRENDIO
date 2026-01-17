@@ -11,7 +11,7 @@
 
 //   const fetchSellerData = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerAddProductReportapi.php");
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerAddProductReportapi.php");
 //       setSellerData(response.data);
 //       console.log(sellerData)
 //     } catch (error) {
@@ -60,7 +60,7 @@
 
 //   const fetchSellerData = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerAddProductReportapi.php ");
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerAddProductReportapi.php ");
 //       setSellerData(response.data);
 //     } catch (error) {
 //       console.error("Error fetching seller report:", error);
@@ -161,7 +161,7 @@
 //   const fetchSellerData = async () => {
 //     try {
 //       // Modify the URL with query parameters to filter data
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerAddProductReportapi.php", {
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerAddProductReportapi.php", {
 //         params: {
 //           month: month,
 //           year: year,
@@ -177,7 +177,7 @@
 //   const fetchSellers = async () => {
 //     try {
 //       // Fetch all the sellers for the seller dropdown
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerListApi.php");
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerListApi.php");
 //       setSellers(response.data);
 //     } catch (error) {
 //       console.error("Error fetching seller list:", error);
@@ -320,7 +320,7 @@
 //   const fetchSellerData = async () => {
 //     try {
 //       // Modify the URL with query parameters to filter data
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerAddProductReportapi.php", {
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerAddProductReportapi.php", {
 //         params: {
 //           month: month,
 //           year: year,
@@ -336,7 +336,7 @@
 //   const fetchSellers = async () => {
 //     try {
 //       // Fetch all the sellers for the seller dropdown
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerListApi.php");
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerListApi.php");
 //       setSellers(response.data);
 //     } catch (error) {
 //       console.error("Error fetching seller list:", error);
@@ -477,7 +477,7 @@
 //   const fetchSellerData = async () => {
 //     try {
 //       // Modify the URL with query parameters to filter data
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerAddProductReportapi.php", {
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerAddProductReportapi.php", {
 //         params: {
 //           month: month,
 //           year: year,
@@ -501,7 +501,7 @@
 //   const fetchSellers = async () => {
 //     try {
 //       // Fetch all the sellers for the seller dropdown
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerListApi.php");
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerListApi.php");
 //       setSellers(response.data);
 //     } catch (error) {
 //       console.error("Error fetching seller list:", error);
@@ -639,7 +639,7 @@ const SellerReport = () => {
 
   const fetchSellerData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerAddProductReportapi.php", {
+      const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerAddProductReportapi.php", {
         params: {
           month: month,
           year: year,
@@ -654,7 +654,7 @@ const SellerReport = () => {
 
   const fetchSellers = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerListApi.php");
+      const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerListApi.php");
       setSellers(response.data);  // Set the list of sellers for dropdown
     } catch (error) {
       console.error("Error fetching seller list:", error);
@@ -663,7 +663,7 @@ const SellerReport = () => {
 
   const fetchAvailableYears = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/GetAvailableYearsApi.php");
+      const response = await axios.get("http://localhost:8000/api/ReportsApi/GetAvailableYearsApi.php");
       setAvailableYears(response.data);  // Set the available years for the year dropdown
     } catch (error) {
       console.error("Error fetching available years:", error);

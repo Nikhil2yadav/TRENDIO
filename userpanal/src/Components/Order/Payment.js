@@ -30,7 +30,7 @@
         // console.log(orderId)
 
         try {
-          const response = await axios.get(`http://localhost:8080/college%20project/mini%20project/api/ShowOrdertotalamount.php?orderId=${orderId}`);
+          const response = await axios.get(`http://localhost:8000/api/ShowOrdertotalamount.php?orderId=${orderId}`);
           console.log("Order Data:", response.data);
           setTotalAmount(response.data[0].totalamount)
           setOrders(response.data); // Store the fetched orders
@@ -54,7 +54,7 @@
           }
 
           const response = await axios.get(
-            `http://localhost:8080/college%20project/mini%20project/api/ShowOrderDetaile.php?orderId=${orderId}`
+            `http://localhost:8000/api/ShowOrderDetaile.php?orderId=${orderId}`
           );
 
           console.log("API Response:", response.data.orderDetails); // Check the response
@@ -250,7 +250,7 @@
 
           // Sending the FormData
           const response = await axios.post(
-              "http://localhost:8080/college%20project/mini%20project/api/InsertPayment.php",
+              "http://localhost:8000/api/InsertPayment.php",
               formData,
               { headers: { "Content-Type": "multipart/form-data" } }
           );
@@ -280,7 +280,7 @@
         }
 
         const response = await axios.get(
-          `http://localhost:8080/college%20project/mini%20project/api/DeleteOrderApi.php?orderId=${orderId}`
+          `http://localhost:8000/api/DeleteOrderApi.php?orderId=${orderId}`
         );
         
         if (response.data.Order === "true") {
@@ -301,7 +301,7 @@
         sortable: true,
         cell: (row) => (
           <img
-            src={`http://localhost:8080/college%20project/mini%20project/api/Images/${row.Image1}`}
+            src={`http://localhost:8000/api/Images/${row.Image1}`}
             alt={row.productname}
             style={{ width: "50px", height: "50px", objectFit: "cover" }}
           />

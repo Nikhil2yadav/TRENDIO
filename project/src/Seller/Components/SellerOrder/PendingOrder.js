@@ -24,7 +24,7 @@
 
 //       try {
 //         const response = await axios.post(
-//           'http://localhost:8080/college%20project/mini%20project/api/GetPendingOrderaccordingtoseller.php',
+//           'http://localhost:8000/api/GetPendingOrderaccordingtoseller.php',
 //           { SellerId },
 //           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
 //         );
@@ -159,7 +159,7 @@ const PendingOrder = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:8080/college%20project/mini%20project/api/GetPendingOrderaccordingtoseller.php',
+          'http://localhost:8000/api/GetPendingOrderaccordingtoseller.php',
           { SellerId },
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
         );

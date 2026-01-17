@@ -16,7 +16,7 @@ const Ratingfeedback = () => {
     const fetchFeedback = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/college%20project/mini%20project/api/GetFeedbackSelleraccording.php?SellerId=${SellerId}`
+          `http://localhost:8000/api/GetFeedbackSelleraccording.php?SellerId=${SellerId}`
         );
         console.log("API Response:", response.data);
 
@@ -43,7 +43,7 @@ const Ratingfeedback = () => {
       formData.append("status", newStatus);
   
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/UpdateFeedbackStatus.php",
+        "http://localhost:8000/api/UpdateFeedbackStatus.php",
         formData
       );
   
@@ -77,7 +77,7 @@ const Ratingfeedback = () => {
   //     formData.append("feedbackId", feedbackId);
 
   //     const response = await axios.post(
-  //       "http://localhost:8080/college%20project/mini%20project/api/DeleteFeedback.php",
+  //       "http://localhost:8000/api/DeleteFeedback.php",
   //       formData
   //     );
 
@@ -105,7 +105,7 @@ const Ratingfeedback = () => {
       name: "Product Image",
       cell: (row) => (
         <img
-          src={`http://localhost:8080/college%20project/mini%20project/api/Images/${row.Image1}`}
+          src={`http://localhost:8000/api/Images/${row.Image1}`}
           alt={row.ProductName}
           style={{ width: "50px", height: "50px", objectFit: "cover" }}
         />

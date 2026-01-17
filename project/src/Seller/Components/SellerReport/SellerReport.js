@@ -13,7 +13,7 @@
 //   const sellerId = localStorage.getItem("userId");
 
 //   useEffect(() => {
-//     axios.get(`http://localhost:8080/college%20project/mini%20project/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`)
+//     axios.get(`http://localhost:8000/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`)
 //       .then(response => {
 //         setReportData(response.data);
 //         // console.log(response.data)
@@ -99,7 +99,7 @@
 //   }, [sellerId, filters]); // Fetch data when sellerId or filters change
 
 //   const fetchReport = () => {
-//     let url = `http://localhost:8080/college%20project/mini%20project/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`;
+//     let url = `http://localhost:8000/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`;
 
 //     // Add filters to URL
 //     if (filters.startDate) url += `&startDate=${filters.startDate}`;
@@ -265,7 +265,7 @@
 
 //   const fetchYears = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 //         params: { getYears: "true" },
 //       });
 //       setYears(response.data);
@@ -275,7 +275,7 @@
 //   };
 
 //   const fetchReport = () => {
-//     let url = `http://localhost:8080/college%20project/mini%20project/api/ReportsApi/sellerReport.php?sellerId=${sellerId}&year=${filters.year}&month=${filters.month}`;
+//     let url = `http://localhost:8000/api/ReportsApi/sellerReport.php?sellerId=${sellerId}&year=${filters.year}&month=${filters.month}`;
     
 //     if (filters.status) url += `&status=${filters.status}`;
 
@@ -442,7 +442,7 @@
 //   // Fetch seller report
 //   const fetchReport = async () => {
 //     try {
-//       let url = `http://localhost:8080/college%20project/mini%20project/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`;
+//       let url = `http://localhost:8000/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`;
 //       if (filters.year) url += `&year=${filters.year}`;
 //       if (filters.month) url += `&month=${filters.month}`;
 //       if (filters.status) url += `&status=${filters.status}`;
@@ -462,7 +462,7 @@
 //   };
 //   const fetchProductTypes = async () => {
 //     try {
-//       const response = await axios.get(`http://localhost:8080/college%20project/mini%20project/api/ReportsApi/GetProductTypes.php?sellerId=${sellerId}`);
+//       const response = await axios.get(`http://localhost:8000/api/ReportsApi/GetProductTypes.php?sellerId=${sellerId}`);
 //       setProductTypes(response.data);
 //       console.log(productTypes)
 //     } catch (error) {
@@ -627,7 +627,7 @@ const SellerReport = () => {
   // Fetch seller report with filters
   const fetchReport = async () => {
     try {
-      let url = `http://localhost:8080/college%20project/mini%20project/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`;
+      let url = `http://localhost:8000/api/ReportsApi/sellerReport.php?sellerId=${sellerId}`;
 
       if (filters.year) url += `&year=${filters.year}`;
       if (filters.month) url += `&month=${filters.month}`;
@@ -653,7 +653,7 @@ const SellerReport = () => {
   const fetchProductTypes = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/college%20project/mini%20project/api/ReportsApi/GetProductTypes.php?sellerId=${sellerId}`
+        `http://localhost:8000/api/ReportsApi/GetProductTypes.php?sellerId=${sellerId}`
       );
   
       console.log("Product Types API Response:", response.data); // Debugging

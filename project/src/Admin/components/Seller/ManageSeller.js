@@ -20,7 +20,7 @@
 //       formData.append('SellerId', SellerId);
 
 //       const response = await axios.post(
-//         'http://localhost:8080/college%20project/mini%20project/api/UpdateSellerStatus.php',
+//         'http://localhost:8000/api/UpdateSellerStatus.php',
 //         formData
 //       );
 
@@ -44,7 +44,7 @@
 //   useEffect(() => {
 //     const fetchData = async () => {
 //       try {
-//         const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/GetSellerdata.php");
+//         const response = await axios.get("http://localhost:8000/api/GetSellerdata.php");
 //         console.log('API Response:', response);
 
 //         if (Array.isArray(response.data)) {
@@ -65,7 +65,7 @@
 //     const confirmed = window.confirm('Are you sure you want to delete this seller?');
 //     if (confirmed) {
 //       try {
-//         await axios.get(`http://localhost:8080/college%20project/mini%20project/api/DeleteSeller.php?SellerId=${SellerId}`);
+//         await axios.get(`http://localhost:8000/api/DeleteSeller.php?SellerId=${SellerId}`);
 //         setSellers(sellers.filter(seller => seller.SellerId !== SellerId));
 //         toast.success('Seller deleted successfully', {
 //             className: "toastifycontainer",
@@ -204,7 +204,7 @@ const ManageSeller = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/GetSellerdata.php");
+        const response = await axios.get("http://localhost:8000/api/GetSellerdata.php");
         console.log('API Response:', response);
 
         if (Array.isArray(response.data)) {
@@ -228,7 +228,7 @@ const ManageSeller = () => {
       formData.append('SellerId', SellerId);
 
       const response = await axios.post(
-        'http://localhost:8080/college%20project/mini%20project/api/UpdateSellerStatus.php',
+        'http://localhost:8000/api/UpdateSellerStatus.php',
         formData
       );
 
@@ -254,7 +254,7 @@ const ManageSeller = () => {
     const confirmed = window.confirm('Are you sure you want to delete this seller?');
     if (confirmed) {
       try {
-        await axios.get(`http://localhost:8080/college%20project/mini%20project/api/DeleteSeller.php?SellerId=${SellerId}`);
+        await axios.get(`http://localhost:8000/api/DeleteSeller.php?SellerId=${SellerId}`);
         setSellers(sellers.filter(seller => seller.SellerId !== SellerId));
         toast.success('Seller deleted successfully');
       } catch (error) {

@@ -22,7 +22,7 @@
 
 //       try {
 //         const response = await axios.post(
-//           'http://localhost:8080/college%20project/mini%20project/api/GetDiltileinformationaboutproduct.php',
+//           'http://localhost:8000/api/GetDiltileinformationaboutproduct.php',
 //           { orderDetailId },
 //           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
 //         );
@@ -126,7 +126,7 @@
 //               <tr key={index}>
 //                 <td>{index + 1}</td>
 //                 <td>
-//   <img src={`http://localhost:8080/college%20project/mini%20project/api/Images/${user.Image1}`} alt="Product" width="50" />
+//   <img src={`http://localhost:8000/api/Images/${user.Image1}`} alt="Product" width="50" />
 // </td>
 
 //                 <td>{user.ProductName}</td>
@@ -183,7 +183,7 @@ const OrderDetails = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:8080/college%20project/mini%20project/api/GetDiltileinformationaboutproduct.php',
+          'http://localhost:8000/api/GetDiltileinformationaboutproduct.php',
           { orderDetailId },
           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
         );
@@ -208,7 +208,7 @@ const OrderDetails = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/college%20project/mini%20project/api/UpdatePendingtoshiping.php',
+        'http://localhost:8000/api/UpdatePendingtoshiping.php',
         { orderDetailId, orderStatus },
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
       );
@@ -306,7 +306,7 @@ const OrderDetails = () => {
                 <td>{index + 1}</td>
                 <td>
                   <img
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${user.Image1}`}
+                    src={`http://localhost:8000/api/Images/${user.Image1}`}
                     alt="Product"
                     width="50"
                   />

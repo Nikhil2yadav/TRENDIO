@@ -32,7 +32,7 @@ const Checkout = () => {
   // const handleUpdateAddress = async (addressid) => {
   //   if (addressid) {
   //     const response = await axios.post(
-  //       `http://localhost:8080/college%20project/mini%20project/api/Updateaddress.php`,
+  //       `http://localhost:8000/api/Updateaddress.php`,
   //       { addressid },
   //       { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
   //     );
@@ -49,7 +49,7 @@ const Checkout = () => {
     if (addressid) {
       try {
         const response = await axios.post(
-          `http://localhost:8080/college%20project/mini%20project/api/Updateaddress.php`,
+          `http://localhost:8000/api/Updateaddress.php`,
           { 
             addressid,
             Address: address.Address,
@@ -84,7 +84,7 @@ const Checkout = () => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/Address.php",
+        "http://localhost:8000/api/Address.php",
         {
           BuyerId: BuyerId,
           Address: address.Address,
@@ -121,7 +121,7 @@ const Checkout = () => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/GetProductBuyerWise.php",
+        "http://localhost:8000/api/GetProductBuyerWise.php",
         { BuyerId },
         { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
       );
@@ -147,7 +147,7 @@ const Checkout = () => {
     }
     try {
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/SaveAddress.php",
+        "http://localhost:8000/api/SaveAddress.php",
         { BuyerId },
         { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
       );
@@ -187,7 +187,7 @@ const Checkout = () => {
     if (confirmed) {
       try {
         await axios.get(
-          `http://localhost:8080/college%20project/mini%20project/api/Deleteaddtocart.php?addtocartid=${addtocartid}`,
+          `http://localhost:8000/api/Deleteaddtocart.php?addtocartid=${addtocartid}`,
           { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
         );
 
@@ -220,7 +220,7 @@ const Checkout = () => {
       sortable: true,
       cell: (row) => (
         <img
-          src={`http://localhost:8080/college%20project/mini%20project/api/Images/${row.ProductImage}`}
+          src={`http://localhost:8000/api/Images/${row.ProductImage}`}
           alt={row.ProductName}
           style={{ width: "50px", height: "50px", objectFit: "cover" }}
         />
@@ -295,7 +295,7 @@ const Checkout = () => {
       }
 
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/OrderApi.php",
+        "http://localhost:8000/api/OrderApi.php",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );
@@ -323,7 +323,7 @@ const Checkout = () => {
   //   toggleAddressForm();
   //   setIsEditing(true);
   //   const response = await axios.get(
-  //     `http://localhost:8080/college%20project/mini%20project/api/Getsinagleaddress.php?addressid=${addressid}`,
+  //     `http://localhost:8000/api/Getsinagleaddress.php?addressid=${addressid}`,
   //     {
   //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
   //     }
@@ -344,7 +344,7 @@ const Checkout = () => {
           toggleAddressForm();
             // setIsEditing(true);
           const response = await axios.get(
-            `http://localhost:8080/college%20project/mini%20project/api/Getsinagleaddress.php?addressid=${addressid}`,
+            `http://localhost:8000/api/Getsinagleaddress.php?addressid=${addressid}`,
             {
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
             }
@@ -369,7 +369,7 @@ const Checkout = () => {
   const handleDeleteAddress = async (addressid) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/college%20project/mini%20project/api/DeleteAddres.php?addressid=${addressid}`,
+        `http://localhost:8000/api/DeleteAddres.php?addressid=${addressid}`,
         {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
         }

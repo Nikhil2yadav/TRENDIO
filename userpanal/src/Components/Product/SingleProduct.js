@@ -36,7 +36,7 @@ const SingleProduct = () => {
   const fetchProductReviews = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/college%20project/mini%20project/api/GetProductReviews.php?productId=${productId}`
+        `http://localhost:8000/api/GetProductReviews.php?productId=${productId}`
       );
       setReviews(response.data);
       console.log(response.data)
@@ -53,7 +53,7 @@ const SingleProduct = () => {
 
     try {
       await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/InsertFeedback.php",
+        "http://localhost:8000/api/InsertFeedback.php",
         formData
       );
       alert("Review added successfully!");
@@ -69,7 +69,7 @@ const SingleProduct = () => {
     const fetchProductDetails = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/college%20project/mini%20project/api/Getsingleproductapi.php?ProductId=${productId}`
+          `http://localhost:8000/api/Getsingleproductapi.php?ProductId=${productId}`
         );
         if (response.data) {
           setProduct(response.data);
@@ -128,7 +128,7 @@ const SingleProduct = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/AddtocartApi.php",
+        "http://localhost:8000/api/AddtocartApi.php",
         formData
       );
       console.log(response.data);
@@ -149,7 +149,7 @@ const SingleProduct = () => {
               {product?.Image1 && (
                 <Carousel.Item>
                   <img
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${product.Image1}`}
+                    src={`http://localhost:8000/api/Images/${product.Image1}`}
                     alt="Product"
                     className="img-fluid d-block mx-auto"
                     style={{ maxHeight: "400px", objectFit: "cover" }}
@@ -159,7 +159,7 @@ const SingleProduct = () => {
               {product?.image2 && (
                 <Carousel.Item>
                   <img
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${product.image2}`}
+                    src={`http://localhost:8000/api/Images/${product.image2}`}
                     alt="Product"
                     className="img-fluid d-block mx-auto"
                     style={{ maxHeight: "400px", objectFit: "cover" }}
@@ -169,7 +169,7 @@ const SingleProduct = () => {
               {product?.image3 && (
                 <Carousel.Item>
                   <img
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${product.image3}`}
+                    src={`http://localhost:8000/api/Images/${product.image3}`}
                     alt="Product"
                     className="img-fluid d-block mx-auto"
                     style={{ maxHeight: "400px", objectFit: "cover" }}
@@ -179,7 +179,7 @@ const SingleProduct = () => {
               {product?.image4 && (
                 <Carousel.Item>
                   <img
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${product.image4}`}
+                    src={`http://localhost:8000/api/Images/${product.image4}`}
                     alt="Product"
                     className="img-fluid d-block mx-auto"
                     style={{ maxHeight: "400px", objectFit: "cover" }}

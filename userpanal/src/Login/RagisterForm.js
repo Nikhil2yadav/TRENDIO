@@ -28,7 +28,7 @@
 //         formData.append('Number', number);
 
 //         try {
-//             const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/BuyerApi.php', formData);
+//             const response = await axios.post('http://localhost:8000/api/BuyerApi.php', formData);
 //             const data = response.data;
 //             console.log(response.data);
 
@@ -126,7 +126,7 @@ const RagisterForm = ({ onSuccess }) => {
         formData.append('Number', number);
 
         try {
-            const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/BuyerApi.php', formData);
+            const response = await axios.post('http://localhost:8000/api/BuyerApi.php', formData);
             const data = response.data;
             console.log(response.data);
 

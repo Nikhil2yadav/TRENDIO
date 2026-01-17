@@ -16,7 +16,7 @@
 //   useEffect(() => {
 //     const totalnumberProduct =async()=>{
 //       try{
-//         const response=await axios.post('http://localhost:8080/college%20project/mini%20project/api/totalProductcount.php'
+//         const response=await axios.post('http://localhost:8000/api/totalProductcount.php'
 
 //       );
         
@@ -33,7 +33,7 @@
 //   useEffect(()=>{
 //     const totalbuyer=async()=>{
 //       try {
-//         const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/Buyercount.php')
+//         const response = await axios.post('http://localhost:8000/api/Buyercount.php')
 //         setTotalbuyer(response.data.totalbuyer);
 //       } catch (error) {
 //         console.error('Error fetching products:', error);
@@ -45,7 +45,7 @@
 //   useEffect(()=>{
 //     const Totalseller=async()=>{
 //       try {
-//         const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/totalSeller.php');
+//         const response = await axios.post('http://localhost:8000/api/totalSeller.php');
 //         setTotalseller(response.data.totalseller);
 //         console.log(response.data);
 //       } catch (error) {
@@ -58,7 +58,7 @@
 //   useEffect(()=>{
 //     const Totalamount=async()=>{
 //       try {
-//         const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/getTotalAmountOfAdmin.php');
+//         const response = await axios.post('http://localhost:8000/api/getTotalAmountOfAdmin.php');
 //         setTotalamount(response.data.totalAdminAmount);
 //         console.log(response.data);
 //       } catch (error) {
@@ -71,7 +71,7 @@
 //   useEffect(()=>{
 //     const Totalorder=async()=>{
 //       try {
-//         const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/TotalOrderApi.php');
+//         const response = await axios.post('http://localhost:8000/api/TotalOrderApi.php');
 //         setTotalOrders(response.data.totalorder);
 //         console.log(totalOrders)
 //         console.log(response.data);
@@ -223,23 +223,23 @@ export default function Home() {
   };
 
   useEffect(() => {
-    fetchData('http://localhost:8080/college%20project/mini%20project/api/totalProductcount.php', (data) => setTotalProduct(data.totalproduct), 'Error fetching products');
+    fetchData('http://localhost:8000/api/totalProductcount.php', (data) => setTotalProduct(data.totalproduct), 'Error fetching products');
   }, []);
 
   useEffect(() => {
-    fetchData('http://localhost:8080/college%20project/mini%20project/api/Buyercount.php', (data) => setTotalBuyer(data.totalbuyer), 'Error fetching buyers');
+    fetchData('http://localhost:8000/api/Buyercount.php', (data) => setTotalBuyer(data.totalbuyer), 'Error fetching buyers');
   }, []);
 
   useEffect(() => {
-    fetchData('http://localhost:8080/college%20project/mini%20project/api/totalSeller.php', (data) => setTotalSeller(data.totalseller), 'Error fetching sellers');
+    fetchData('http://localhost:8000/api/totalSeller.php', (data) => setTotalSeller(data.totalseller), 'Error fetching sellers');
   }, []);
 
   useEffect(() => {
-    fetchData('http://localhost:8080/college%20project/mini%20project/api/getTotalAmountOfAdmin.php', (data) => setTotalAmount(data.totalAdminAmount), 'Error fetching amount');
+    fetchData('http://localhost:8000/api/getTotalAmountOfAdmin.php', (data) => setTotalAmount(data.totalAdminAmount), 'Error fetching amount');
   }, []);
 
   useEffect(() => {
-    fetchData('http://localhost:8080/college%20project/mini%20project/api/TotalOrderApi.php', (data) => setTotalOrders(data.totalorder), 'Error fetching orders');
+    fetchData('http://localhost:8000/api/TotalOrderApi.php', (data) => setTotalOrders(data.totalorder), 'Error fetching orders');
   }, []);
 
   const formattedAmount = parseFloat(totalAmount).toFixed(2);

@@ -60,7 +60,7 @@ const SellerRegister = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:8080/college%20project/mini%20project/api/SellerApi.php',
+        'http://localhost:8000/api/SellerApi.php',
         formData
       );
       const data = response.data;

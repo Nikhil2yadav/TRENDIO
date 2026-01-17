@@ -37,7 +37,7 @@ const Login = () => {
 
     try {
       // Try admin login first
-      let response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/LoginApi.php',
+      let response = await axios.post('http://localhost:8000/api/LoginApi.php',
         formData.toString(),
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
       );

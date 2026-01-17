@@ -17,7 +17,7 @@
 //     const fetchProducts = async () => {
 //       try {
 //         const response = await axios.post(
-//           'http://localhost:8080/college%20project/mini%20project/api/GetTotalDelivered.php',
+//           'http://localhost:8000/api/GetTotalDelivered.php',
 //           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
 //         );
 //         if (Array.isArray(response.data)) {
@@ -173,7 +173,7 @@
 //     const fetchProducts = async () => {
 //       try {
 //         const response = await axios.post(
-//           'http://localhost:8080/college%20project/mini%20project/api/GetTotalDelivered.php',
+//           'http://localhost:8000/api/GetTotalDelivered.php',
 //           { headers: { 'Content-Type': 'application/x-www-form-urlencoded' }}
 //         );
 //         if (Array.isArray(response.data)) {
@@ -197,7 +197,7 @@
 //     const fetchYears = async () => {
 //       try {
 //         const response = await axios.post(
-//           'http://localhost:8080/college%20project/mini%20project/api/GetOrderYears.php'
+//           'http://localhost:8000/api/GetOrderYears.php'
 //         );
 //         setYears(response.data.years || []);
 //       } catch (error) {
@@ -378,8 +378,8 @@ const ViewOrderHistory = () => {
     const fetchData = async () => {
       try {
         const [ordersRes, yearsRes] = await Promise.all([
-          axios.post('http://localhost:8080/college%20project/mini%20project/api/GetTotalDelivered.php', { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }),
-          axios.post('http://localhost:8080/college%20project/mini%20project/api/GetOrderYears.php')
+          axios.post('http://localhost:8000/api/GetTotalDelivered.php', { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }),
+          axios.post('http://localhost:8000/api/GetOrderYears.php')
         ]);
 
         if (Array.isArray(ordersRes.data)) {

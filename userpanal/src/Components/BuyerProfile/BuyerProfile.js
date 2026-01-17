@@ -24,7 +24,7 @@ const BuyerProfile = () => {
   const fetchBuyerData = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/GetSingleBuyerProfile.php",
+        "http://localhost:8000/api/GetSingleBuyerProfile.php",
         { BuyerId },
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
       );
@@ -54,7 +54,7 @@ const BuyerProfile = () => {
     e.preventDefault();
     try {
     const response=  await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/UpdateBuyerProfile.php",
+        "http://localhost:8000/api/UpdateBuyerProfile.php",
         { ...editableData, BuyerId },
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
       );
@@ -84,7 +84,7 @@ const BuyerProfile = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/UpdateBuyerPassword.php",
+        "http://localhost:8000/api/UpdateBuyerPassword.php",
         new URLSearchParams({
           BuyerId,
           current_password: currentPassword,

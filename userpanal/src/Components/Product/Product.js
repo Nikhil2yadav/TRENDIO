@@ -19,7 +19,7 @@
 // useEffect(() => {
 //   const fetchProductTypes = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/GetallProductypeofproduct.php");
+//       const response = await axios.get("http://localhost:8000/api/GetallProductypeofproduct.php");
 //       setProductTypes(response.data);
 //       console.log(productTypes)
 //     } catch (error) {
@@ -34,7 +34,7 @@
 //     const fetchProducts = async () => {
 //       try {
 //         const response = await axios.get(
-//           "http://localhost:8080/college%20project/mini%20project/api/DisplayProductApi.php"
+//           "http://localhost:8000/api/DisplayProductApi.php"
 //         );
 
 //         console.log("API Response:", response.data); // Debugging API response
@@ -161,7 +161,7 @@
 //                     >
 //                       <Card.Img
 //                         variant="top"
-//                         src={`http://localhost:8080/college%20project/mini%20project/api/Images/${product.Image1}`}
+//                         src={`http://localhost:8000/api/Images/${product.Image1}`}
 //                         style={{ height: "100%", width: "80%" }}
 //                         onError={(e) => (e.target.src = "https://via.placeholder.com/150")}
 //                       />
@@ -208,7 +208,7 @@ const Product = () => {
     const fetchProductTypes = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/college%20project/mini%20project/api/GetallProductypeofproduct.php"
+          "http://localhost:8000/api/GetallProductypeofproduct.php"
         );
         setProductTypes(response.data);
         console.log("Fetched Product Types:", response.data);
@@ -224,7 +224,7 @@ const Product = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/college%20project/mini%20project/api/DisplayProductApi.php"
+          "http://localhost:8000/api/DisplayProductApi.php"
         );
         if (Array.isArray(response.data)) {
           setProducts(response.data);
@@ -358,7 +358,7 @@ const Product = () => {
                     >
                       <Card.Img
                         variant="top"
-                        src={`http://localhost:8080/college%20project/mini%20project/api/Images/${product.Image1}`}
+                        src={`http://localhost:8000/api/Images/${product.Image1}`}
                         style={{ height: "100%", width: "80%" }}
                         onError={(e) => (e.target.src = "https://via.placeholder.com/150")}
                       />

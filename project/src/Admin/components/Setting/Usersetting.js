@@ -21,7 +21,7 @@ const Usersetting = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/GetAdmindata.php');
+        const response = await axios.post('http://localhost:8000/api/GetAdmindata.php');
         setUserData(response.data[0]);
       } catch (error) {
         console.error("Error fetching user data:", error);
@@ -55,7 +55,7 @@ const Usersetting = () => {
     try {
       // Call the API to verify old password and update the new one
       const response = await axios.post(
-        "http://localhost:8080/college%20project/mini%20project/api/UpdateAdminPassword.php",
+        "http://localhost:8000/api/UpdateAdminPassword.php",
         qs.stringify(payload), // Encode payload using qs
         { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }  // Set header to form-urlencoded
       );

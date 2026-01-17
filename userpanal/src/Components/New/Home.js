@@ -14,7 +14,7 @@ const Home = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/college%20project/mini%20project/api/DisplayProductApi.php"
+          "http://localhost:8000/api/DisplayProductApi.php"
         );
         setProducts(response.data); // Assuming the API returns an array of products
         console.log(response.data);
@@ -275,7 +275,7 @@ const Home = () => {
                     >
                       <Card.Img
                         variant="top"
-                        src={`http://localhost:8080/college%20project/mini%20project/api/Images/${product.Image1}`}
+                        src={`http://localhost:8000/api/Images/${product.Image1}`}
                         style={{
                           height: "100%",
                           width: "100%",

@@ -16,7 +16,7 @@ const SearchResults = () => {
     const fetchSearchResults = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/college%20project/mini%20project/api/SearchProductApi.php?query=${query}`
+          `http://localhost:8000/api/SearchProductApi.php?query=${query}`
         );
         setProducts(Array.isArray(response.data) ? response.data : []); // Ensure products is always an array
       } catch (error) {
@@ -53,7 +53,7 @@ const SearchResults = () => {
                 <Card className="w-200 h-100 d-flex flex-column">
                   <Card.Img
                     variant="top"
-                    src={`http://localhost:8080/college%20project/mini%20project/api/Images/${product.Image1}`}
+                    src={`http://localhost:8000/api/Images/${product.Image1}`}
                     style={{ height: '300px' }}
                   />
                   <Card.Body className="d-flex flex-column">

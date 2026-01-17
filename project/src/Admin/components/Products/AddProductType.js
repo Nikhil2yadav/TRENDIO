@@ -9,7 +9,7 @@
 
 //   const handleSubmit = async (e) => {
 //     e.preventDefault();
-//     const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/insertProductType.php', {
+//     const response = await axios.post('http://localhost:8000/api/insertProductType.php', {
 //       TypeName: productType,
 //     });
 
@@ -71,7 +71,7 @@ const AddProductType = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await axios.post('http://localhost:8080/college%20project/mini%20project/api/insertProductType.php', {
+    const response = await axios.post('http://localhost:8000/api/insertProductType.php', {
       TypeName: productType,
     }, { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
 );

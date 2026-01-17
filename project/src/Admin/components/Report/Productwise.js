@@ -21,7 +21,7 @@
 
 // // // // // // //   const fetchOrderData = async () => {
 // // // // // // //     try {
-// // // // // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // // // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // // // // //         params: { month, year, sellerId }
 // // // // // // //       });
 // // // // // // //       setOrderData(response.data);
@@ -147,7 +147,7 @@
 
 // // // // // //   const fetchOrderData = async () => {
 // // // // // //     try {
-// // // // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // // // //         params: { month, year, productType } // Using productType instead of sellerId
 // // // // // //       });
 // // // // // //       setOrderData(response.data);
@@ -283,7 +283,7 @@
 
 // // // // //   const fetchAvailableYears = async () => {
 // // // // //     try {
-// // // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // // //         params: { getYears: true }
 // // // // //       });
 // // // // //       setAvailableYears(response.data); // Set the available years for the dropdown
@@ -294,7 +294,7 @@
 
 // // // // //   const fetchOrderData = async () => {
 // // // // //     try {
-// // // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // // //         params: { month, year, productType, sellerId }
 // // // // //       });
 // // // // //       setOrderData(response.data);
@@ -438,7 +438,7 @@
 // // // //   // Fetch available product types from backend
 // // // //   const fetchAvailableProductTypes = async () => {
 // // // //     try {
-// // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // //         params: { getProductTypes: true }
 // // // //       });
 // // // //       setAvailableProductTypes(response.data); // Set available product types
@@ -450,7 +450,7 @@
 // // // //   // Fetch available years from backend
 // // // //   const fetchAvailableYears = async () => {
 // // // //     try {
-// // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // //         params: { getYears: true }
 // // // //       });
 // // // //       setAvailableYears(response.data); // Set available years
@@ -462,7 +462,7 @@
 // // // //   // Fetch order data based on filters
 // // // //   const fetchOrderData = async () => {
 // // // //     try {
-// // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // //         params: { month, year, productType, sellerId }
 // // // //       });
 // // // //       setOrderData(response.data); // Set order data for display
@@ -609,7 +609,7 @@
 // // // //   // Fetch available product types from backend
 // // // //   const fetchAvailableProductTypes = async () => {
 // // // //     try {
-// // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // //         params: { getProductTypes: true }
 // // // //       });
 // // // //       setAvailableProductTypes(response.data); // Set available product types
@@ -622,7 +622,7 @@
 // // // //   // Fetch available years from backend
 // // // //   const fetchAvailableYears = async () => {
 // // // //     try {
-// // // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // //         params: { getYears: true }
 // // // //       });
 // // // //       setAvailableYears(response.data); // Set available years
@@ -634,7 +634,7 @@
 // // // //   // Fetch order data based on filters
 // // // //   // const fetchOrderData = async () => {
 // // // //   //   try {
-// // // //   //     const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // //   //     const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // //   //       params: { month, year, productType, sellerId }
 // // // //   //     });
 // // // //   //     setOrderData(response.data); // Set order data for display
@@ -645,7 +645,7 @@
 // // // //   // };
 // // // //   const fetchOrderData = async () => {
 // // // //     try {
-// // // //         const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // // //         const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // // //             params: { month, year, productType, sellerId }
 // // // //         });
 // // // //         setOrderData(response.data);
@@ -800,7 +800,7 @@
 // // //   // Fetch available product types from backend
 // // //   const fetchAvailableProductTypes = async () => {
 // // //     try {
-// // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // //         params: { getProductTypes: true }
 // // //       });
 // // //       setAvailableProductTypes(response.data); // Set available product types
@@ -812,7 +812,7 @@
 // // //   // Fetch available years from backend
 // // //   const fetchAvailableYears = async () => {
 // // //     try {
-// // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // //         params: { getYears: true }
 // // //       });
 // // //       setAvailableYears(response.data); // Set available years
@@ -824,7 +824,7 @@
 // // //   // Fetch order data based on filters
 // // //   const fetchOrderData = async () => {
 // // //     try {
-// // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // //         params: { month, year, productType, sellerId }
 // // //       });
 // // //       console.log('API Response:', response.data); // Log the response for debugging
@@ -978,7 +978,7 @@
 // // //   // Fetch available product types from backend
 // // //   const fetchAvailableProductTypes = async () => {
 // // //     try {
-// // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // //         params: { getProductTypes: true }
 // // //       });
 // // //       setAvailableProductTypes(response.data); // Set available product types
@@ -990,7 +990,7 @@
 // // //   // Fetch available years from backend
 // // //   const fetchAvailableYears = async () => {
 // // //     try {
-// // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // //         params: { getYears: true }
 // // //       });
 // // //       setAvailableYears(response.data); // Set available years
@@ -1002,7 +1002,7 @@
 // // //   // Fetch order data based on filters
 // // //   const fetchOrderData = async () => {
 // // //     try {
-// // //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// // //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // // //         params: { month, year, productType, sellerId }
 // // //       });
 // // //       console.log('API Response:', response.data); // Log the response for debugging
@@ -1156,7 +1156,7 @@
 // //   // Fetch available product types from backend
 // //   const fetchAvailableProductTypes = async () => {
 // //     try {
-// //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // //         params: { getProductTypes: true }
 // //       });
 // //       setAvailableProductTypes(response.data);
@@ -1168,7 +1168,7 @@
 // //   // Fetch available years from backend
 // //   const fetchAvailableYears = async () => {
 // //     try {
-// //       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// //       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // //         params: { getYears: true }
 // //       });
 // //       setAvailableYears(response.data);
@@ -1180,7 +1180,7 @@
 // //   // Fetch order data based on filters
 // //   // const fetchOrderData = async () => {
 // //   //   try {
-// //   //     const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+// //   //     const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 // //   //       params: { month, year, productType, sellerId }
 // //   //     });
 // //   //     console.log('API Response:', response.data);
@@ -1199,7 +1199,7 @@
 // //   const fetchOrderData = async () => {
 // //     try {
 // //       const response = await axios.get(
-// //         "http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php",
+// //         "http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php",
 // //         {
 // //           params: { month, year, productType, sellerId },
 // //         }
@@ -1338,7 +1338,7 @@
 //   // Fetch Order Data
 //   const fetchOrderData = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 //         params: { month, year, productType, sellerId },
 //       });
 
@@ -1359,7 +1359,7 @@
 //   // Fetch Product Types for Dropdown
 //   const fetchProductTypes = async () => {
 //     try {
-//       const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+//       const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
 //         params: { getProductTypes: "true" },
 //       });
 
@@ -1484,7 +1484,7 @@ const SellerOrderReport = () => {
   // Fetch Data
   const fetchOrderData = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+      const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
         params: { month, year, productType, sellerId },
       });
 
@@ -1504,7 +1504,7 @@ const SellerOrderReport = () => {
   // Fetch product types
   const fetchProductTypes = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+      const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
         params: { getProductTypes: "true" },
       });
       setProductTypes(response.data);
@@ -1516,7 +1516,7 @@ const SellerOrderReport = () => {
   // Fetch sellers
   const fetchSellers = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+      const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
         params: { getSellers: "true" },
       });
       setSellers(response.data);
@@ -1528,7 +1528,7 @@ const SellerOrderReport = () => {
   // Fetch available years
   const fetchYears = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/college%20project/mini%20project/api/ReportsApi/SellerOrderReportapi.php", {
+      const response = await axios.get("http://localhost:8000/api/ReportsApi/SellerOrderReportapi.php", {
         params: { getYears: "true" },
       });
       setYears(response.data);
